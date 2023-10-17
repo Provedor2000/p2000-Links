@@ -2,28 +2,19 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Despesas</title>
+    <title>Página de Manutenção</title>
     
     <script>
-        // Função para redirecionar para a nova página
+        // Função para redirecionar para a nova página após um determinado tempo (em milissegundos)
         function redirecionar() {
             window.location.href = "https://form.respondi.app/CdaNqGhQ";
         }
 
-        // Data e hora para o redirecionamento (no exemplo, 31/07/2023 às 12:00)
-        var dataRedirecionamento = new Date("2023-07-31T12:00:00").getTime();
+        // Define o tempo em milissegundos antes do redirecionamento (por exemplo, 5 segundos)
+        var tempoDeEspera = 1;
 
-        // Função para verificar a data e redirecionar, se necessário
-        function verificarDataRedirecionamento() {
-            var dataAtual = new Date().getTime();
-
-            if (dataAtual >= dataRedirecionamento) {
-                redirecionar();
-            }
-        }
-
-        // Verificar a data ao carregar a página
-        verificarDataRedirecionamento();
+        // Agendar o redirecionamento ao carregar a página
+        setTimeout(redirecionar, tempoDeEspera);
     </script>
 </head>
 <body>
